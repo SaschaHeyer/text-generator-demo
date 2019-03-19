@@ -17,19 +17,26 @@
                             accept='image/*'
                             onchange='showPicked(this)'>
                     </div>
-                    <input> Please enter text here </input>
-                    <button class='choose-file-button' type='button' onclick='showPicker()'>Select Image</button>
+                    <div class='input'> Please enter first text here: </div>
+                    <div><input id='input_text'></div>
+                    <!-- <button class='choose-file-button' type='button' onclick='showPicker()'>Select Image</button>
                     <div class='upload-label'>
                         <label id='upload-label'>No file chosen</label>
                     </div>
                     <div>
                         <img id='image-picked' class='no-display' alt='Chosen Image' height='200'>
-                    </div>
-                    <div class='analyze'>
+                    </div> -->
+                    <!-- <div class='analyze'>
                         <button id='analyze-button' class='analyze-button' type='button' onclick='analyze()'>Analyze</button>
+                    </div> -->
+                    <div class='analyze'>
+                        <button id='analyze-button' class='analyze-button' type='button' onclick='analyze()'>Complete this text!</button>
                     </div>
-                    <div class='result-label'>
+                    <!-- <div class='result-label'>
                         <label id='result-label'></label>
+                    </div> -->
+                    <div class='result-box'>
+                        <label id='result-box'></label>
                     </div>
                 </div>
             </div>
