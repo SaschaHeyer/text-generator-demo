@@ -8,7 +8,7 @@ from io import BytesIO
 from fastai import *
 from fastai.text import *
 
-model_file_url = 'https://www.dropbox.com/s/hetbp385dwfcxsw/english.pkl?dl=0'
+model_file_url = 'https://www.dropbox.com/s/ct01m9qvivhdwpb/english.pkl?raw=1'
 
 model_file_name = 'export.pkl'
 classes = ['black', 'grizzly', 'teddys']
