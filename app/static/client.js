@@ -13,11 +13,13 @@ function showPicked(input) {
 }
 
 function analyze() {
-    var input_text = el('input-text');
+    var input_text = el('input-text').value;
     if (input_text.length < 1) alert('Please input some text!');
 
     el('analyze-button').innerHTML = 'Creating...';
     var xhr = new XMLHttpRequest();
+    var loc = window.location;
+    console.debug(`${loc.protocol}//${loc.hostname}:${loc.port}/analyze`);
     xhr.open('POST', `${loc.protocol}//${loc.hostname}:${loc.port}/analyze`, true);
     xhr.onerror = function() {alert (xhr.responseText);}
     xhr.onload = function(e) {
