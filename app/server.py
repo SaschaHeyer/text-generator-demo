@@ -4,6 +4,7 @@ from starlette.staticfiles import StaticFiles
 from starlette.middleware.cors import CORSMiddleware
 import uvicorn, aiohttp, asyncio
 from io import BytesIO
+import json
 
 from fastai import *
 from fastai.text import *
@@ -49,7 +50,8 @@ async def analyze(request):
     #return JSONResponse({'result': learn.predict(img)[0]})
     n_words = 100
     n_sentences = 1
-    return JSONResponse({'result': learn.predict(init_text, n_words, temperature=0.75)})
+    out = JSONResponse({'result': learn.predict(init_text, n_words, temperature=0.75)})
+    return json.dumps(out)
 
 if __name__ == '__main__':
     if 'serve' in sys.argv: uvicorn.run(app, host='0.0.0.0', port=8080)
