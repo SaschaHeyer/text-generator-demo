@@ -13,25 +13,29 @@ function showPicked(input) {
 }
 
 function analyze() {
+    min_words = 6; 
     var input_text = el('input-text').value;
-    if (input_text.length < 1) alert('Please input some text!');
-
+    words = input_text.split(' ').length;
+    if (words < min_words) {
+        alert(`Please input at least ${min_words} words!`);
+	return;
+    }
     el('analyze-button').innerHTML = 'Creating...';
     var xhr = new XMLHttpRequest();
     var loc = window.location;
-    console.debug(`${loc.protocol}//${loc.hostname}:${loc.port}/analyze`);
     xhr.open('POST', `${loc.protocol}//${loc.hostname}:${loc.port}/analyze`, true);
     xhr.onerror = function() {alert (xhr.responseText);}
     xhr.onload = function(e) {
         if (this.readyState === 4) {
             var response = JSON.parse(e.target.responseText);
-            el('result-box').innerHTML = `Result = ${response['result']}`;
+	    var print_string = JSON.parse(response['result']);
+            el('result-box').innerHTML = `${print_string}`;
         }
         el('analyze-button').innerHTML = 'Complete text';
     }
 
     var data = new FormData();
-    data.append('text', el('result-box').innerHTML);
+    data.append('text', input_text);
     xhr.send(data);
 
     // var uploadFiles = el('file-input').files;

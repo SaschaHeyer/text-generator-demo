@@ -44,15 +44,15 @@ def index(request):
 @app.route('/analyze', methods=['POST'])
 async def analyze(request):
     data = await request.form()
-    init_text = await (data['text'])
+    init_text = data['text']
     #img_bytes = await (data['file'].read())
     #img = open_image(BytesIO(img_bytes))
     #return JSONResponse({'result': learn.predict(img)[0]})
     n_words = 100
     n_sentences = 1
-    out = JSONResponse({'result': learn.predict(init_text, n_words, temperature=0.75)})
-    return json.dumps(out)
+    out = learn.predict(init_text, n_words, temperature=0.75)
+    return JSONResponse({'result': json.dumps(out)})
 
 if __name__ == '__main__':
-    if 'serve' in sys.argv: uvicorn.run(app, host='0.0.0.0', port=8080)
+    if 'serve' in sys.argv: uvicorn.run(app, host='0.0.0.0', port=80)
 
