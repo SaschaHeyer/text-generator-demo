@@ -1,45 +1,53 @@
 <html lang='en'>
     <head>
         <meta charset='utf-8'>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
         <link rel='stylesheet' href='../static/style.css'>
         <script src='../static/client.js'></script>
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     </head>
     <body>
-        <div>
-            <div class='center'>
-                <div class='title'>Text Generation</div>
-                <div class='content'>
-                    <div class='no-display'>
-                        <input id='file-input'
-                            class='no-display'
-                            type='file'
-                            name='file'
-                            accept='image/*'
-                            onchange='showPicked(this)'>
+        <div class='container center'>
+            <h1>Text Generation Demo</h1>
+            <div>
+                <div class='explainer'>
+                    Text generator using Deep Neural Networks.
+                    Its accuracy is rapidly improving, as there are many new techniques 
+                    which will be integrated in the next version.
+                    Also, Spanish and German are coming soon. <br>
+                    For more info, visit its <a href='https://github.com/cduguet/ulmfit-es'>repository</a> or the
+                    <a href="https://www.cristianduguet.com">main site</a>.
+                </div>
+
+                <div class='instruction lead'> Please enter first text here: </div>
+                <form>
+                    <div class='form-group'>
+                        <textarea placeholder="The world's GDP has been growing for the past" id="input-text" cols="30" rows="4"></textarea>
                     </div>
-                    <div class='input'> Please enter first text here: </div>
-                    <div><input id='input-text'></div>
-                    <!-- <button class='choose-file-button' type='button' onclick='showPicker()'>Select Image</button>
-                    <div class='upload-label'>
-                        <label id='upload-label'>No file chosen</label>
-                    </div>
-                    <div>
-                        <img id='image-picked' class='no-display' alt='Chosen Image' height='200'>
-                    </div> -->
-                    <!-- <div class='analyze'>
-                        <button id='analyze-button' class='analyze-button' type='button' onclick='analyze()'>Analyze</button>
-                    </div> -->
-                    <div class='analyze'>
-                        <button id='analyze-button' class='analyze-button' type='button' onclick='analyze()'>Complete this text!</button>
-                    </div>
-                    <!-- <div class='result-label'>
-                        <label id='result-label'></label>
-                    </div> -->
-                    <div class='result-box'>
-                        <label id='result-box'></label>
-                    </div>
+                </form>
+                
+                <div class='analyze'>
+                    <button id='analyze-button' class='analyze-button' type='button' onclick='analyze()'>Complete this text!</button>
+                </div>
+                <!-- <div class='result-label'>
+                    <label id='result-label'></label>
+                </div> -->
+                <blockquote class="blockquote text-center">
+                        <p class="mb-0" id='result-box'></p>
+                        <!-- <footer class="blockquote-footer">machine.</footer> -->
+                </blockquote>
+                <div class='result-box'>
+                    
                 </div>
             </div>
-        </div>
+            <footer class="footer mt-auto py-3 fixed-bottom">
+            <div class="container">
+                <div ><a class="stretched-link" href="https://www.cristianduguet.com">CRISTIAN DUGUET</a></div>
+                <span class="text-muted">Copyright 2019</span>
+            </div>
+            </footer>
+        </div> 
     </body>
 </html>
