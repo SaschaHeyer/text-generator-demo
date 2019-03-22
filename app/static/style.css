@@ -9,13 +9,17 @@ body {
 .content {
     max-width: 750px;
 }
+
+#result-box{
+    min-height: 4rem;
+}
+
 .explainer {
     padding: 1em;
     /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
 }
 
 .instruction {
-    padding: 1em;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 .center {
@@ -40,6 +44,12 @@ textarea {
     border-radius: 8px;
     rows=3;
 }
+
+.analyze {
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
 button.analyze-button {
     width: 200px;
     height: 40px;

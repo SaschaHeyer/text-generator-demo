@@ -8,19 +8,22 @@
 
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     </head>
-    <body>
-        <div class='container center'>
-            <h1>Text Generation Demo</h1>
-            <div>
+    <body class="d-flex flex-column h-100">
+        <main role="main" class="flex-shrink-0">
+            <div class='container text-center'>
+                <h1>Text Generation Demo</h1>
                 <div class='explainer'>
-                    Text generator using Deep Neural Networks.
+                    This is a text generator using Deep Neural Networks.
+                    You will input a small initial text (min 6 words long) and it will 
+                    start writing a test by itself. 
+                    <br>
                     Its accuracy is rapidly improving, as there are many new techniques 
-                    which will be integrated in the next version.
-                    Also, Spanish and German are coming soon. <br>
+                    integrated in the next version.
+                    <br>
+                    Spanish, German: coming soon. <br>
                     For more info, visit its <a href='https://github.com/cduguet/ulmfit-es'>repository</a> or the
                     <a href="https://www.cristianduguet.com">main site</a>.
                 </div>
-
                 <div class='instruction lead'> Please enter first text here: </div>
                 <form>
                     <div class='form-group'>
@@ -34,20 +37,22 @@
                 <!-- <div class='result-label'>
                     <label id='result-label'></label>
                 </div> -->
-                <blockquote class="blockquote text-center">
-                        <p class="mb-0" id='result-box'></p>
+                <div class="card text-center mb-0 bg-light">
+                    <div class='container'>
+                        <p id='result-box'></p>
                         <!-- <footer class="blockquote-footer">machine.</footer> -->
-                </blockquote>
-                <div class='result-box'>
-                    
+                    </blockquote>    
                 </div>
             </div>
-            <footer class="footer mt-auto py-3 fixed-bottom">
-            <div class="container">
-                <div ><a class="stretched-link" href="https://www.cristianduguet.com">CRISTIAN DUGUET</a></div>
-                <span class="text-muted">Copyright 2019</span>
-            </div>
-            </footer>
-        </div> 
+        </main>
+        <footer class="footer mt-auto py-3">
+        <div class="container text-center">
+            <div ><a class="stretched-link" href="https://www.cristianduguet.com">CRISTIAN DUGUET</a></div>
+            <span class="text-muted">Copyright 2019</span>
+        </div>
+        </footer>
+        <!-- <div class='container center'>
+            
+        </div>  -->
     </body>
 </html>
