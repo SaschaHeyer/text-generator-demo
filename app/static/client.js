@@ -15,7 +15,7 @@ function showPicked(input) {
 function analyze() {
     min_words = 6; 
     var input_text = el('input-text').value;
-    if (input_text == '') {
+    if (!input_text.length) {
         input_text = el('input-text').placeholder;
     }
     words = input_text.split(' ').length;
