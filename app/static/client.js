@@ -13,12 +13,11 @@ function showPicked(input) {
 }
 
 function analyze() {
-    min_words = 6; 
-    var input_text = el('input-text').value;
-    if (!input_text.length) {
-        input_text = el('input-text').placeholder;
-    }
+    min_words = 6;  
+    input = el('input-text');
+    var input_text = input.value || input.placeholder;
     words = input_text.split(' ').length;
+    // console.log(input_text);
     if (words < min_words) {
         alert(`Please input at least ${min_words} words!`);
 	return;
