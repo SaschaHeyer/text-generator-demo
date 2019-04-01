@@ -10,6 +10,7 @@ languages.forEach(function(value, index){
 
 function switchLanguage(language){
     doc = document.getElementById("HTML");
+    document.getElementById('input-text').value = '';
     doc.setAttribute('lang', language);
     console.log("changing language");
     xhttp.open("GET", "../static/i18n/" + language + ".json", true);
