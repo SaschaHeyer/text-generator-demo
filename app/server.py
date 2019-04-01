@@ -5,6 +5,7 @@ from starlette.middleware.cors import CORSMiddleware
 import uvicorn, aiohttp, asyncio
 from io import BytesIO
 import json
+import codecs
 
 from fastai import *
 from fastai.text import *
@@ -50,6 +51,7 @@ def index(request):
 async def analyze(request):
     data = await request.form()
     init_text = data['text']
+    init_text = codecs.decode(codecs.encode(init_text,'cp1252'),'utf-8')
     language = data['language']
     #img_bytes = await (data['file'].read())
     #img = open_image(BytesIO(img_bytes))
