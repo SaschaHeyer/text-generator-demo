@@ -1,38 +1,61 @@
-<html lang='en'>
+<html lang='en' id="HTML">
     <head>
         <meta charset='utf-8'>
         <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
         <link rel='stylesheet' href='../static/style.css'>
         <script src='../static/client.js'></script>
 
         <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' integrity='sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T' crossorigin='anonymous'>
+        <link rel="shortcut icon" href="static/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="static/favicon.ico" type="image/x-icon">
     </head>
     <body class='d-flex flex-column h-100'>
         <main role='main' class='flex-shrink-0'>
+                <nav class="navbar navbar-expand-sm navbar-light bg-light">
+                        <a class="navbar-brand" href="https://cax.ai">
+                            <img src="https://cax.ai/images/logo-dark.png" height="30px"/>
+                        </a>
+                        <ul class="navbar-nav mr-auto"></ul>
+                        <ul class="navbar-nav ml-auto">
+                            <h2>
+                                <a data-lang="en" class="language">🇬🇧</a>
+                                <a data-lang="es" class="language">🇪🇸</a>
+                            </h2>
+                        </ul>
+                      </nav>
+
             <div class='container text-center'>
-                <h1>Text Generation Demo</h1>
+                <h1>
+                    <span data-langkey="Text Generation Demo">Text Generation Demo</span>
+                </h1>
                 <div class='explainer'>
-                    This is a text generator using Deep Neural Networks.
-                    You will input a small initial text (min 6 words long) and it will 
-                    start writing based on it. 
-                    <br>
-                    Its accuracy is rapidly improving, as there are many new techniques 
-                    integrated in the next version.
-                    <br>
-                    Spanish, German: coming soon. <br>
-                    For more info, visit its <a href='https://github.com/cduguet/ulmfit-es'>repository</a> or the
-                    <a href='https://www.cristianduguet.com'>main site</a>.
+                    <p>
+                        <span data-langkey="Text explanation of the Demo">This is a text generator using Deep Neural Networks. You will input a small initial text (min 6 words long) and it will start writing based on it.</span>
+                    </p>
+                    <p>
+                        <span data-langkey="disclaimer about accuracy">Its accuracy is rapidly improving, as there are many new techniques integrated in the next version.</span>
+                        <span data-langkey="language hint">For Text Generation in Spanish, click on the top-right flag.</span>
+                    </p>
+                    <p>
+                        <span data-langkey="more info">For more info, </span>
+                        <a data-langkey="click here" href='https://www.cristianduguet.com'>click here.</a> 
+                    </p>
                 </div>
-                <div class='instruction lead'> Please enter first text here: </div>
+                <div class='instruction lead'>
+                    <span data-langkey="instruction">Please enter first text here:</span>
+                </div>
                 <form>
                     <div class='form-group'>
-                        <textarea placeholder='Jack Bauer (born February 2, 1973) is a federal agent ' id='input-text' cols='30' rows='4'></textarea>
+                        <textarea data-langkey='placeholder' placeholder='Jack Bauer (born February 2, 1973) is a federal agent ' id='input-text' cols='30' rows='4'></textarea>
                     </div>
                 </form>
                 
                 <div class='analyze'>
-                    <button id='analyze-button' class='analyze-button' type='button' onclick='analyze()'>Complete this text!</button>
+                    <button id='analyze-button' class='analyze-button' type='button' onclick='analyze()'>
+                        <span data-langkey='button-info'>Complete this text!</span>
+                    </button>
                 </div>
                 <!-- <div class='result-label'>
                     <label id='result-label'></label>
@@ -54,5 +77,6 @@
         <!-- <div class='container center'>
             
         </div>  -->
+        <script src='../static/i18n.js'></script>
     </body>
 </html>

@@ -1,0 +1,11 @@
+{
+    "Text Generation Demo": "Text Generation Demo",
+    "Text explanation of the Demo": "This is a text generator using Deep Neural Networks. You will input a small initial text (min 6 words long) and it will start writing based on it.",
+    "disclaimer about accuracy": "Its accuracy is rapidly improving, as there are many new techniques integrated in the next version.",
+    "language hint": "For Text Generation in Spanish, click on the top-right flag.",
+    "more info": "For more info, ",
+    "click here": "click here.",
+    "instruction": "Please enter first text here:",
+    "placeholder": "Jack Bauer (born February 2, 1973) is a federal agent ",
+    "button-info": "Complete this text!"
+}

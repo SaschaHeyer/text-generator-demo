@@ -38,6 +38,8 @@ function analyze() {
 
     var data = new FormData();
     data.append('text', input_text);
+    var doc = el('HTML');
+    data.append('language', doc.getAttribute('lang'));
     xhr.send(data);
 
     // var uploadFiles = el('file-input').files;

@@ -1,0 +1,11 @@
+{
+    "Text Generation Demo": "Demo Generación de Texto",
+    "Text explanation of the Demo": "Éste es un generador de textos usanando Redes Neuronales. Basado en un texto inicial (mínimo 6 palabras) escribirá el resto de un corto texto, por sí mismo.",
+    "disclaimer about accuracy": "Su exactitud va rápidamente mejorando, ya que estaremos integrando nuevas técnicas en la siguiente versión.",
+    "language hint": "Para Texto en Inglés, presione en la bandera arriba.",
+    "more info": "Para más información, ",
+    "click here": "haga click aquí.",
+    "instruction": "Introduzca un texto inicial:",
+    "placeholder": "Chadwick Boseman, más conocido como la Pantera Negra, es el príncipe de la República de Wakanda. ",
+    "button-info": "Completar texto!"
+}
